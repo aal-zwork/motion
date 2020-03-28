@@ -3,7 +3,7 @@ FROM alpine
 RUN apk update && apk upgrade && \
     apk add --no-cache git autoconf automake build-base linux-headers \
     libjpeg-turbo-dev libmicrohttpd-dev libzip-dev ffmpeg-dev gettext-dev \
-    libmicrohttpd ffmpeg gettext libjpeg-turbo && \
+    libmicrohttpd ffmpeg gettext libjpeg-turbo tzdata && \
     git clone https://github.com/Motion-Project/motion.git motion-build && \
     cd motion-build && autoreconf -fiv && \
     ./configure --prefix /motion --exec-prefix /motion && \

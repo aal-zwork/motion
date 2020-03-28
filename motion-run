@@ -4,7 +4,8 @@ echo "Start motion at $(date -u +%Y-%m-%d_%H:%M)"
 
 if [ ! -f /motion/config/motion.conf ]; then
     cp -rf /motion/etc/motion-dist/* /motion/config/
-fi  
+fi 
+rm -rf /motion/etc/motion
 cp -rf /motion/config /motion/etc/motion
 
 cd /motion/data

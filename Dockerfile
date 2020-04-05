@@ -22,6 +22,6 @@ RUN if [ ! -f /motion/etc/motion/motion.conf ]; then \
     mv /motion/etc/motion /motion/etc/motion-dist && \
     mkdir -p /motion/log
 
-COPY motion-run /bin/
+COPY motion-run /usr/local/bin/
 
 CMD [ "motion-run" ]
